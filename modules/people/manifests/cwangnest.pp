@@ -39,4 +39,13 @@ class people::cwangnest {
   }
 
   include osx::dock::autohide
+
+  # Nest Directory...
+  package { "NestDirectory":
+    ensure => installed,
+    provider => 'compressed_app'
+    source => "http://hub.corp.nestlabs.com/share/Tools/NestDirectory/Builds/1.0.23/NestDirectory-1.0.23.zip"
+    logoutput => true
+  }
+ 
 }

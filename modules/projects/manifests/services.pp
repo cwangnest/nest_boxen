@@ -32,5 +32,11 @@ class projects::services {
     logoutput => true
   }
 
-  
+  # Services repo
+  repository {
+    "/Users/${::boxen_user}/Code/services":
+    source => "git@github.com:nestlabs/services.git",
+    provider => "git",
+    ensure => present
+  }  
 }
